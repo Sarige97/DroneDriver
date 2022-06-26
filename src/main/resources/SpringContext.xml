@@ -6,7 +6,11 @@
 
     <context:property-placeholder location="classpath*:config.properties"/>
 
-    <bean class="java.net.Socket">
+    <bean class="java.net.ServerSocket" lazy-init="true">
+        <constructor-arg name="port" value="${socket.server.port}"/>
+    </bean>
+
+    <bean class="java.net.Socket" lazy-init="true">
         <constructor-arg name="host" value="${socket.server.host}"/>
         <constructor-arg name="port" value="${socket.server.port}"/>
     </bean>
