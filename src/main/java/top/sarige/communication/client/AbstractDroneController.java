@@ -4,10 +4,15 @@ import top.sarige.communication.client.action.LightingController;
 import top.sarige.communication.client.action.MovingController;
 import top.sarige.communication.client.action.SteeringController;
 
-public class AbstractDroneController implements DroneController {
+public abstract class AbstractDroneController implements DroneController {
 
     MovingController movingController;
     SteeringController steeringController;
     LightingController lightingController;
+
+    abstract protected Command receiveCommand();
+
+    abstract protected void executeCommand();
+
 
 }

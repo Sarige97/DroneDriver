@@ -1,4 +1,9 @@
 package top.sarige.communication.client.action;
 
-public interface MovingController {
+import top.sarige.communication.client.Command;
+
+public interface MovingController extends CommandExecutor {
+
+    void execute(Command command);
+
 }
