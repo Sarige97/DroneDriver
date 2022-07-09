@@ -9,11 +9,20 @@ public class Motor {
 
     public int id;
     public int status;
-    public boolean isAccelerate;
+    public int accelerate;
 
-    public Motor(int id, int status, boolean isAccelerate) {
+    public Motor(int id, int status, int accelerate) {
         this.id = id;
         this.status = status;
-        this.isAccelerate = isAccelerate;
+        this.accelerate = accelerate;
+    }
+
+    @Override
+    public String toString() {
+        return "Motor{" +
+                "id=" + id +
+                ", status=" + status +
+                ", accelerate=" + accelerate +
+                '}';
     }
 }

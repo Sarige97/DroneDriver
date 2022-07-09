@@ -26,4 +26,13 @@ public class Lighting {
     public int getStatus() {
         return status;
     }
+
+    @Override
+    public String toString() {
+        return "Lighting{" +
+                "id=" + id +
+                ", type=" + type +
+                ", status=" + status +
+                '}';
+    }
 }

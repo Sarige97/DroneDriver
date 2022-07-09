@@ -17,4 +17,12 @@ public class Steering {
     public int getId() {
         return id;
     }
+
+    @Override
+    public String toString() {
+        return "Steering{" +
+                "id=" + id +
+                ", angle=" + angle +
+                '}';
+    }
 }
